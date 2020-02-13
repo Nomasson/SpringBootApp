@@ -40,5 +40,18 @@ public class ItemDao {
     public void removeStudentById(int id) {
         this.Items.remove(id);
     }
-    
+
+    public void insertItemToDb(Item item) {
+        this.Items.put(item.getNumber(),item);
+    }
+
+    public void updateAmountById(int newAmount) {
+
+    }
+
+    public void updateItem(Item item) {
+        Item updatedItem = Items.get(item.getNumber());
+        updatedItem.setAmount(item.getAmount());
+        Items.put(updatedItem.getNumber(),updatedItem);
+    }
 }

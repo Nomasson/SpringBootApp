@@ -21,4 +21,19 @@ public class ItemService {
     public void removeItemById(int id){
         this.ItemDao.removeStudentById(id);
     }
+
+    public void insertItem(Item item) {
+        ItemDao.insertItemToDb(item);
+    }
+
+    public void updateAmountById(int id, int newAmount) {
+        ItemDao.updateAmountById(newAmount);
+    }
+
+    public void updateAmountById(int newAmount) {
+    }
+
+    public void updateItem(Item item) {
+        ItemDao.updateItem(item);
+    }
 }
